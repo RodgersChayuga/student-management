@@ -3,13 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import "./globals.css";
 import SigninForm from "./_auth/forms/SigninForm";
 import SignupForm from "./_auth/forms/SignupForm";
-import Home from "./_root/pages/home";
 import AuthLayout from "./_auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
+import Home from "./_root/pages/Home";
 
 const App = () => {
   return (
-    <main className="flex h-screen">
+    <main className="flex h-screen bg-blue-50">
       <Routes>
         {/* public routes */}
         <Route element={<AuthLayout />}>
