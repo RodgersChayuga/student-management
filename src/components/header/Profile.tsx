@@ -1,6 +1,6 @@
 const Profile = () => {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="items-center hidden space-x-2 sm:flex">
       <img
         className="w-10 h-10 rounded-full"
         src="/assets/profile-icon.jpg"
