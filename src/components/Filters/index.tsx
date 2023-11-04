@@ -6,17 +6,19 @@ const Filters = () => {
       <>
         <select className="block w-full px-3 py-2 text-sm border border-gray-200 rounded-md pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
           <option selected>Country</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>Country 1</option>
+          <option>Country 2</option>
+          <option>Country 3</option>
+          <option>Country 4</option>
         </select>
       </>
       <>
         <select className="block w-full px-3 py-2 text-sm border border-gray-200 rounded-md pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
           <option selected>University</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>University A</option>
+          <option>University B</option>
+          <option>University C</option>
+          <option>University D</option>
         </select>
       </>
       <>
@@ -25,14 +27,17 @@ const Filters = () => {
           <option>1</option>
           <option>2</option>
           <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
         </select>
       </>
       <>
         <select className="block w-full px-3 py-2 text-sm border border-gray-200 rounded-md pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
           <option selected>Language</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>English</option>
+          <option>French</option>
+          <option>Turkish</option>
         </select>
       </>
       <button
