@@ -1,10 +1,49 @@
+import { useDispatch } from "react-redux";
+
 import { FiFilter } from "react-icons/fi";
 
-const Filters = () => {
+import {
+  updateCountryFilter,
+  updateUniversityFilter,
+  updateDurationFilter,
+  updateLanguageFilter,
+} from "../../store/filterSlice";
+
+const Filters: React.FC = () => {
+  const dispatch = useDispatch();
+  const { country, university, duration, language } = useSelector(
+    (state: RootState) => state.filters
+  );
+
+  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch(updateCountryFilter(event.target.value));
+  };
+
+  const handleUniversityChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    dispatch(updateUniversityFilter(event.target.value));
+  };
+
+  const handleDurationChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    dispatch(updateDurationFilter(event.target.value));
+  };
+
+  const handleLanguageChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    dispatch(updateLanguageFilter(event.target.value));
+  };
+
   return (
-    <div className="flex w-full gap-4 ml-8">
+    <div className="hidden w-full gap-4 ml-8 md:flex">
       <>
-        <select className="block w-full px-3 py-2 text-sm border border-gray-200 rounded-md pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+        <select
+          className="block w-full px-3 py-2 text-sm border border-gray-200 rounded-md pr-9 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+          onChange={}
+        >
           <option selected>Country</option>
           <option>Country 1</option>
           <option>Country 2</option>
