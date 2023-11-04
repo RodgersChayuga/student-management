@@ -13,13 +13,13 @@ const App = () => {
       <Routes>
         {/* public routes */}
         <Route element={<AuthLayout />}>
-          <Route index path="/sign-in" element={<SigninForm />} />
+          <Route path="/sign-in" element={<SigninForm />} />
           <Route path="/sign-up" element={<SignupForm />} />
         </Route>
 
         {/* private routes */}
         <Route element={<RootLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route index path="/" element={<Home />} />
         </Route>
       </Routes>
     </main>
