@@ -11,6 +11,7 @@ import {
 import { applications } from "../../data";
 import { columns } from "./column";
 import DebouncedInput from "./DebounceInput";
+import Filters from "../Filters";
 
 const Table = () => {
   const [data] = useState(() => [...applications]);
@@ -41,6 +42,7 @@ const Table = () => {
             placeholder="Search for items..."
           />
         </div>
+        <Filters />
       </div>
       <table className="w-full bg-white divide-y divide-gray-200 rounded-lg">
         <thead>
