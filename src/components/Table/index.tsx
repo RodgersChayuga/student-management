@@ -12,10 +12,13 @@ import { applications } from "../../data";
 import { columns } from "./column";
 import DebouncedInput from "./DebounceInput";
 import Filters from "../Filters";
+// import { useAppSelector } from "../../store/store";
 
 const Table = () => {
   const [data] = useState(() => [...applications]);
   const [globalFilter, setGlobalFilter] = useState("");
+
+  // const countries = useAppSelector(state=>state.filter.country)
 
   const table = useReactTable({
     data,

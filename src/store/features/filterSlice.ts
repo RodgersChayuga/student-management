@@ -1,22 +1,21 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 
-interface FilterState {
+export interface IFilter {
   country: string;
   university: string;
   duration: string;
   language: string;
 }
 
-const initialState: FilterState = {
-  country: "All",
-  university: "All",
-  duration: "All",
-  language: "All",
+const initialState: IFilter = {
+  country: "",
+  university: "",
+  duration: "",
+  language: "",
 };
 
-const filterSlice = createSlice({
-  name: "filters",
+export const FilterSlice = createSlice({
+  name: "filter",
   initialState,
   reducers: {
     updateCountryFilter: (state, action: PayloadAction<string>) => {
@@ -34,11 +33,11 @@ const filterSlice = createSlice({
   },
 });
 
+export default FilterSlice.reducer;
+
 export const {
   updateCountryFilter,
   updateUniversityFilter,
   updateDurationFilter,
   updateLanguageFilter,
-} = filterSlice.actions;
-
-export default filterSlice.reducer;
+} = FilterSlice.actions;
