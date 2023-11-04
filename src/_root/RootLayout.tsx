@@ -7,7 +7,7 @@ const RootLayout = () => {
   return (
     <>
       {isAuthenticated ? (
-        <Navigate to="/" />
+        <Navigate to="/sign-in" />
       ) : (
         <section className="flex flex-col w-full py-1 bg-blue-50">
           <div className="w-[90%] mx-auto">
